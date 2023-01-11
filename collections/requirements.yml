@@ -1,0 +1,5 @@
+# Role for Digital Signage
+ - src: https://github.com/City-of-Bloomington/ansible-signage-production.git
+
+# Generic Linux Role
+ - src: https://github.com/City-of-Bloomington/ansible-role-linux/

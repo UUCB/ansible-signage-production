@@ -1,0 +1,5 @@
+ - hosts: signage_players
+   roles:
+     - role: 'signage_player'
+     - role: 'linux'
+     
