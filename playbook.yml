@@ -1,5 +1,5 @@
  - hosts: signage_players
    roles:
-     - role: 'signage_player'
+     - role: 'ansible_role_signage_player'
      - role: 'linux'
      
