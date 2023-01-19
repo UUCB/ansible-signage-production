@@ -1,5 +1,5 @@
 # Role for Digital Signage
-#  - src: https://github.com/sheepman4267/ansible_role_signage_player.git
+ - src: https://github.com/sheepman4267/ansible_role_signage_player.git
 
 # # Generic Linux Role
 #  - src: https://github.com/City-of-Bloomington/ansible-role-linux.git
