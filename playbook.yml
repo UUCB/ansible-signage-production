@@ -3,3 +3,34 @@
   roles:
     # - role: 'ansible-role-linux'
     - role: 'ansible_role_signage_player'
+  
+  tasks:
+    - name: Start Pipewire
+      ansible.builtin.systemd:
+        name: pipewire.service
+        state: started
+        scope: user
+      environment:
+        XDG_RUNTIME_DIR: "/run/user/1001"
+      become_user: "signage"
+      become: true
+
+    - name: Start Pipewire
+      ansible.builtin.systemd:
+        name: pipewire-pulse.service
+        state: started
+        scope: user
+      environment:
+        XDG_RUNTIME_DIR: "/run/user/1001"
+      become_user: "signage"
+      become: true
+
+    - name: Start Pipewire
+      ansible.builtin.systemd:
+        name: wireplumber.service
+        state: started
+        scope: user
+      environment:
+        XDG_RUNTIME_DIR: "/run/user/1001"
+      become_user: "signage"
+      become: true
