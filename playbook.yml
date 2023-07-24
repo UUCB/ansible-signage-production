@@ -34,3 +34,8 @@
         XDG_RUNTIME_DIR: "/run/user/1001"
       become_user: "signage"
       become: true
+
+- hosts: kiosks
+  become: yes
+  roles:
+    - role: 'ansible_role_signage_player' 
