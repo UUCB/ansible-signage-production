@@ -35,6 +35,22 @@
       become_user: "signage"
       become: true
 
+    - name: Ensure certificates directory exists
+      ansible.builtin.file:
+        path: "/usr/lib64/mozilla/certificates"
+        state: directory
+        mode: "0665"
+
+    - name: Copy UUCB Internal Root CA
+      ansible.builtin.copy:
+        src: "uubloomington-intermediate.crt"
+        dest: "/usr/lib64/mozilla/certificates/uubloomington-intermediate.crt"
+
+    - name: Install Firefox policies.json
+      ansible.builtin.copy:
+        src: "policies.json"
+        dest: "/usr/lib64/firefox/distribution/policies.json"
+
 - hosts: kiosks
   become: yes
   roles:
