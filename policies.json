@@ -3,5 +3,11 @@
     "Certificates": {
       "Install": ["/usr/lib64/mozilla/certificates/uubloomington-intermediate.crt"]
     }
+  },
+  "Permissions": {
+    "Autoplay": {
+      "Allow": ["https://openshow.internal.uubloomington.org"],
+      "Locked": true
+    }
   }
 }
